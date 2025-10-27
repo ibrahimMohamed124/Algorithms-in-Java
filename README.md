@@ -7,9 +7,6 @@ A collection of basic and advanced algorithms implemented in **Java** for learni
 - Palindrome check  
 - Digit counting  
 - Other common algorithm problems
-- and so on...
-- ش
-- شى
 
 ## ⚙️ Technologies
 - Java 17+
