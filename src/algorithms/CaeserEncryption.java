@@ -3,8 +3,6 @@ package algorithms;
 public class CaeserEncryption {
 
     static StringBuilder ENC(String str, int key) {
-        if (key <= 0) return new StringBuilder(str);
-
         String chars = "abcdefghijklmnopqrstuvwxyz";
         StringBuilder encrypted = new StringBuilder();
 
@@ -18,10 +16,10 @@ public class CaeserEncryption {
                 encrypted.append(c);
             } else {
                 int encryptedIndex = (index + key) % 26;
+                if (encryptedIndex < 0) encryptedIndex += 26; // ✅ التصحيح المهم
                 encrypted.append(chars.charAt(encryptedIndex));
             }
         }
-
         return encrypted;
     }
 
