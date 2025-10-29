@@ -6,8 +6,9 @@ public class CheckPalindrome {
 
     static boolean isPalindrome(String str){
         str = str.toLowerCase(Locale.ROOT);
+        int length = str.length();
         for (int i =0;i<str.length() / 2;i++){
-            if (str.charAt(i) != str.charAt(str.length() - i - 1)){
+            if (str.charAt(i) != str.charAt(length - i - 1)){
                 return false;
             }
         }
